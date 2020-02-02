@@ -29,12 +29,5 @@ public class Node<T> {
     public String toString() {
         return item + " "+ next;
     }
-
-    public static void main(String args[]) {
-        Node<Integer> node = new Node<>(3);
-        node.setNext(new Node<Integer>(4));
-        System.out.println(node);
-
-    }
 }
 
