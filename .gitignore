@@ -1,3 +1,5 @@
 Java-Data-Structures.iml
 build
 .idea
+bin
+.gradle

@@ -24,7 +24,7 @@ class StackLLTests {
     @Test
     @DisplayName("Stack<Double> Initialization")
     void initDoubleStack() {
-        StackLL<Double> doubleStackLL = new StackLL();
+        StackLL<Double> doubleStackLL = new StackLL<>();
         doubleStackLL.add(2.25);
         doubleStackLL.add(3.75);
         assertEquals(2, doubleStackLL.size(), "test stack count");
@@ -36,16 +36,15 @@ class StackLLTests {
     @DisplayName("Test pop on empty stack")
     void exceptionTesting() {
         StackLL<Integer> stack = new StackLL<>();
-        Exception exception = assertThrows(NoSuchElementException.class, () ->
-                stack.pop());
+        Exception exception = assertThrows(NoSuchElementException.class, () -> stack.pop());
         assertEquals("Stack is empty", exception.getMessage());
     }
 
     @Test
     @DisplayName("Test Iterator")
     void iterateIntegerStack() {
-        final int[] values = {5, 2, 3, 1};
-        final int[] insertValues = {1, 3, 2, 5};
+        final int[] values = { 5, 2, 3, 1 };
+        final int[] insertValues = { 1, 3, 2, 5 };
         int j = 0;
         StackLL<Integer> stack = new StackLL<>();
         for (int item : insertValues) {
@@ -61,8 +60,7 @@ class StackLLTests {
     void iterateIntegerStackException() {
         StackLL<Integer> stack = new StackLL<>();
         Iterator<Integer> it = stack.iterator();
-        Exception exception = assertThrows(NoSuchElementException.class, () ->
-                it.next());
+        Exception exception = assertThrows(NoSuchElementException.class, () -> it.next());
         assertEquals("No more items in StackLL", exception.getMessage());
     }
 }
