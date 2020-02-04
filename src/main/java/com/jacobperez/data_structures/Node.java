@@ -1,4 +1,4 @@
-package com.jakeperez.datastructures;
+package com.jacobperez.data_structures;
 
 public class Node<T> {
     private T item;

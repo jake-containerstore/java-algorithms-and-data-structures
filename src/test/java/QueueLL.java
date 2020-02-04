@@ -1,4 +1,4 @@
-import com.jakeperez.datastructures.QueueLL;
+import com.jacobperez.data_structures.QueueLL;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -41,7 +41,7 @@ class QueueLLTests {
         }
         Iterator<Integer> iterator = queue.iterator();
         while(iterator.hasNext()) {
-            assertEquals(items[i++], iterator.next());
+            assertEquals((int) items[i++], (int) iterator.next());
         }
         Exception exception = assertThrows(NoSuchElementException.class, () -> iterator.next());
         assertEquals("No more elements in Queue", exception.getMessage());

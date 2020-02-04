@@ -1,4 +1,4 @@
-import com.jakeperez.datastructures.StackLL;
+import com.jacobperez.data_structures.StackLL;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -14,7 +14,7 @@ class StackLLTests {
     @Test
     @DisplayName("Stack<String> Initialization")
     void initStringStack() {
-        StackLL<String> stringStack = new StackLL();
+        StackLL<String> stringStack = new StackLL<>();
         stringStack.add("world");
         assertEquals(1, stringStack.size(), "test stack count");
         assertEquals("world", stringStack.pop(), "test stack pop");
@@ -28,7 +28,7 @@ class StackLLTests {
         doubleStackLL.add(2.25);
         doubleStackLL.add(3.75);
         assertEquals(2, doubleStackLL.size(), "test stack count");
-        assertEquals(3.75, doubleStackLL.pop(), "test stack pop");
+        assertEquals(3.75, (double) doubleStackLL.pop(), "test stack pop");
         assertEquals(1, doubleStackLL.size());
     }
 

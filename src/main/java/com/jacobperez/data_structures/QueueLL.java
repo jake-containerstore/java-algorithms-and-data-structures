@@ -1,4 +1,4 @@
-package com.jakeperez.datastructures;
+package com.jacobperez.data_structures;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

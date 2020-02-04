@@ -1,3 +1,5 @@
 Java-Data-Structures.iml
-out
+build
 .idea
+*.bat
+gradlew

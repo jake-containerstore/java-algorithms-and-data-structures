@@ -1,4 +1,4 @@
-import com.jakeperez.datastructures.Node;
+import com.jacobperez.data_structures.Node;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -11,10 +11,10 @@ class NodeTests {
     @DisplayName("Node<Integer> instantiated with 5")
     void initIntegerNode() {
         Node<Integer> node = new Node<>(5);
-        assertEquals(5, node.getItem(), "Should equal 5");
+        assertEquals(5, (int) node.getItem(), "Should equal 5");
         assertEquals("5 null", node.toString());
         node.setItem(4);
-        assertEquals(4, node.getItem(), "Should equal 4");
+        assertEquals(4, (int) node.getItem(), "Should equal 4");
         assertEquals(null, node.getNext());
     }
 
@@ -31,12 +31,12 @@ class NodeTests {
     }
 
     @Test
-    @DisplayName("Node<Double> instantiated with 3.14")
+    @DisplayName("Node<Double> instantiated with doubles")
     void initDoubleNode() {
         Node<Double> node = new Node<>(3.14);
-        assertEquals(3.14, node.getItem(), "Should equal 3.14");
+        assertEquals(3.14, (double) node.getItem(), "Should equal 3.14");
         node.setItem(2.17);
-        assertEquals(2.17, node.getItem(), "Should equal 2.17");
+        assertEquals(2.17, (double) node.getItem(), "Should equal 2.17");
         assertEquals(null, node.getNext());
     }
 
